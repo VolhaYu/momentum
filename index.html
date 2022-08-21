@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="assets/favicon.ico" rel="shortcut icon" />
+  <link rel="stylesheet" href="css/owfont-regular.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>momentum</title>
+</head>
+<body>
+  <header class="header">
+    <div class="player hide-player">
+      <div class="player-controls">
+        <button class="play-prev player-icon"></button>
+        <button class="play player-icon"></button>
+        <button class="play-next player-icon"></button>
+        <button class="play-volume player-icon"></button>
+        <input type="range" class="volume-range" value="0" min="0" max="100">
+      </div>
+      <div class="progress-bar">
+        <p class="name-song"></p>
+        <div class="span">
+          <span class="current-time"></span>
+          <span class="track-time"></span>
+        </div>
+        <input type="range" class="progress-range" min="0" max="100">
+
+
+      </div>
+      <ul class="play-list">
+        <li class="play-item">Summer Wind
+          <button class="play player-icon play-track"></button>
+        </li>
+        <li class="play-item">River Flows In You
+          <button class="play player-icon play-track"></button>
+        </li>
+        <li class="play-item">Ennio Morricone
+          <button class="play player-icon play-track"></button>
+        </li>
+        <li class="play-item">Aqua Caelestis
+          <button class="play player-icon play-track"></button>
+        </li>
+      </ul>
+    </div>
+    <div class="weather hide-weather">
+      <input type="text" class="city" placeholder="[Enter city]" value="Minsk"/>
+      <i class="weather-icon owf"></i>
+      <div class="weather-error"></div>
+      <div class="description-container">
+        <span class="temperature"></span>
+        <span class="weather-description"></span>
+      </div>
+      <div class="wind"></div>
+      <div class="humidity"></div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="slider-icons">
+      <button class="slide-prev slider-icon"></button>
+      <button class="slide-next slider-icon"></button>
+    </div>
+    <time class="time hide-time"></time>
+    <date class="date hide-date"></date>
+    <div class="greeting-container hide-greetings">
+      <span class="greeting"> Good evening</span>
+      <input type="text" class="name" placeholder="[Enter name]"/>
+    </div>
+  </main>
+  <footer class="footer">
+    <button class="change-quote"></button>
+    <div class="hide-quote">
+      <div class="quote"></div>
+      <div class="author"></div>
+    </div>
+    <div class="links-settings">
+      <div class="settings"> 
+        <img class="setting" src="assets/svg/settings.svg" alt="settings" width="30">
+        <form action="#" class="form">
+          <div class="window-close">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+          </div>
+          <label class="label label-text"><b>Language:</b>
+            <input class="input lang" type="radio" name="Language" checked> en
+          </label>
+          <label class="label">
+            <input class="input lang" type="radio" name="Language"> ru
+          </label>
+          <label class="label label-text"><b>PhotoSource:</b>
+            <input class="input" type="radio" name="slider" checked> 'GitHub'
+          </label>
+          <label class="label">
+            <input class="input" type="radio" name="slider"> 'Unsplash API'
+          </label>
+          <label class="label">
+            <input class="input" type="radio" name="slider"> 'Flickr API'
+          </label>
+          <label class="label label-text label-click"><b>Hide/show block:</b>
+            <input class="input" type="checkbox" name="bloks" checked> 'Time'
+          </label>
+          <label class="label label-click">
+            <input class="input" type="checkbox" name="bloks" checked> 'Date'
+          </label>
+          <label class="label label-click">
+            <input class="input" type="checkbox" name="bloks" checked> 'Greeting'
+          </label>
+          <label class="label label-click">
+            <input class="input" type="checkbox" name="bloks" checked> 'Quote'
+          </label>
+          <label class="label label-click">
+            <input class="input" type="checkbox" name="bloks" checked> 'Weather'
+          </label>
+          <label class="label label-click">
+            <input class="input" type="checkbox" name="bloks" checked> 'Musik'
+          </label>
+          
+        </form>
+      </div>
+      <div class="links">
+        <a href="https://github.com/VolhaYu"><img src="assets/svg/github.svg" alt="github" width="20"></a>
+        <a href="https://rs.school/js/"><img src="https://rs.school/images/rs_school_js.svg" alt="rs-school" width="40"></a>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="js/playList.js"></script>
+  <script type="module" src="js/index.js"></script>
+</body>
+</html>
